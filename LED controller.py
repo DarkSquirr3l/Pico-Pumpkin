@@ -32,7 +32,7 @@ _thread.start_new_thread(button_reader_thread, ())
 
 i = 1
 while True:
-    print(i)
+    
     if button_pressed == True:
         i += 1
         if i > 3:
@@ -63,7 +63,7 @@ while True:
         red_4_led.value(0)
         red_5_led.value(0)
     elif i == 2:
-        for j in range (5):
+        for j in range (10):
             yel_1_led.value(1)
             yel_2_led.value(1)
             yel_3_led.value(1)
@@ -110,7 +110,34 @@ while True:
             red_4_led.value(0)
             red_5_led.value(0)
     else:
-        utime.sleep(2)
-    
-    
-    
+        yel_1_led.value(1)
+        yel_2_led.value(1)
+        yel_3_led.value(1)
+        yel_4_led.value(1)
+        yel_5_led.value(1)
+        red_1_led.value(1)
+        red_2_led.value(1)
+        red_3_led.value(1)
+        red_4_led.value(1)
+        red_5_led.value(1)
+        utime.sleep(0.2)
+        yel_1_led.value(0)
+        yel_2_led.value(0)
+        utime.sleep(0.2)
+        red_1_led.value(0)
+        red_2_led.value(0)
+        yel_1_led.value(1)
+        yel_2_led.value(1)
+        utime.sleep(0.2)
+        red_1_led.value(1)
+        red_2_led.value(1)
+        red_3_led.value(0)
+        red_4_led.value(0)
+        red_5_led.value(0)
+        utime.sleep(0.2)
+        yel_1_led.value(1)
+        yel_2_led.value(1)
+        yel_3_led.value(0)
+        yel_4_led.value(0)
+        yel_5_led.value(0)
+        utime.sleep(0.2)
