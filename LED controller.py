@@ -36,7 +36,6 @@ led_off(all_leds)
 # Main loop
 i = 1
 while True:
-    print (i)
     if button_pressed:
         i += 1
         if i > 3:
@@ -63,19 +62,31 @@ while True:
             led_on(yel_leds)
             utime.sleep(0.05)
 
-    if i == 3: # need re working.
-        for led in all_leds[:2]:
+    if i == 3: 
+        for led in all_leds:
             led.value(1)
-        utime.sleep(0.2)
-
-        for led in all_leds[:2]:
+            utime.sleep(0.1)
             led.value(0)
-        utime.sleep(0.2)
-
-        for led in all_leds[:2]:
-            led.value(1)
-        utime.sleep(0.2)
-
-        for led in all_leds[5:]:
-            led.value(0)
-        utime.sleep(0.2)
+            
+        l = 0
+        m = 5
+        count = 0
+        while count < 5:
+            print(f"L {l}")
+            print(f"M {m}")
+            print(f"Count {count}")
+            all_leds[l].value(1)
+            utime.sleep(0.1)
+            all_leds[l].value(0)
+            l += 1
+            all_leds[m].value(1)
+            utime.sleep(0.1)
+            all_leds[m].value(0)
+            m += 1
+            count += 1
+        
+        l = 0
+        m = 5
+        count = 0
+                
+            
